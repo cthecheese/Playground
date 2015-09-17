@@ -1,5 +1,5 @@
 class counter {
 
 constructor() {
-    this.count = 1;
+    this.count = 0;
 }

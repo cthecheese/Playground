@@ -13,11 +13,10 @@ gulp.task('copyHTML', function(){
 
 gulp.task('babel', function(){
   gulp.src("src/**/*.js")
-    .pipe(sourcemaps.init())
     .pipe(babel())
+    .on('error', console.error.bind(console))
     .pipe(concat("main.js"))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("public/js"));
 });
 
 gulp.task('watch', function(){
@@ -30,11 +29,11 @@ gulp.task('watch', function(){
   }
 });
 
-// gulp.task('default', ['watch']);
+gulp.task('default', ['watch']);
 
-gulp.task('default', function(){
-  return gulp.src('src/js/main.js')
-        .pipe(babel())
-        .on('error', console.error.bind(console))
-        .pipe(gulp.dest('dist'));
-});
+// gulp.task('default', function(){
+//   return gulp.src('src/js/main.js')
+//         .pipe(babel())
+//         .on('error', console.error.bind(console))
+//         .pipe(gulp.dest('dist'));
+// });
