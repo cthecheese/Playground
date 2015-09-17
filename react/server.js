@@ -8,5 +8,5 @@ app.set('port', (process.env.PORT || 3000));
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.listen(app.get('port'), function() {
-  console.log('Server started for React Sandbox');
+  console.log('Server started for React Sandbox!');
 });
