@@ -1,0 +1,28 @@
+var AccountForm = React.createClass({displayName: "AccountForm",
+  render: function(){
+    return (
+      React.createElement(UserForm, null)
+    );
+  }
+});
+
+var Title = React.createClass({displayName: "Title",
+  render: function(){
+    return (
+      React.createElement("h1", null, this.props.title)
+    )
+  }
+});
+
+var UserForm = React.createClass({displayName: "UserForm",
+  render: function(){
+    return (
+      React.createElement("form", null, 
+        React.createElement("input", {placeholder: "email@example.com"}), 
+        React.createElement("input", {placeholder: "Password..."})
+      )
+    );
+  }
+});
+
+React.render(React.createElement(AccountForm, null), document.body);
