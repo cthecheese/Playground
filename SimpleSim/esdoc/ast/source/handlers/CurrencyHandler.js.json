@@ -1,0 +1,657 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "CurrencyHandler",
+        "range": [
+          170,
+          185
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 6
+          },
+          "end": {
+            "line": 7,
+            "column": 21
+          }
+        }
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                347,
+                358
+              ],
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 2
+                },
+                "end": {
+                  "line": 14,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "currency",
+                  "range": [
+                    359,
+                    367
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 22
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            400,
+                            404
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "currencyToHandle",
+                          "range": [
+                            405,
+                            421
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 25
+                            }
+                          }
+                        },
+                        "range": [
+                          400,
+                          421
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 25
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "currency",
+                        "range": [
+                          424,
+                          432
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 28
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 36
+                          }
+                        }
+                      },
+                      "range": [
+                        400,
+                        432
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 36
+                        }
+                      }
+                    },
+                    "range": [
+                      400,
+                      433
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 37
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "* @type {string} ",
+                        "range": [
+                          374,
+                          395
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 25
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  368,
+                  437
+                ],
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 23
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                358,
+                437
+              ],
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 13
+                },
+                "end": {
+                  "line": 17,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              347,
+              437
+            ],
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 2
+              },
+              "end": {
+                "line": 17,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * This is the simplest constructor a currency handler\n   * can have.\n   *\n   * @param {string} currency The name of the currency to be handled\n   ",
+                "range": [
+                  189,
+                  344
+                ],
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * Returns manipulated currency value to be added to current currencyToHandle\n   *\n   * @param {number} value The base value that is being manipulated\n   * @return {number} mValue The manipulated value\n   ",
+                "range": [
+                  441,
+                  654
+                ],
+                "loc": {
+                  "start": {
+                    "line": 19,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "incrementCurrency",
+              "range": [
+                657,
+                674
+              ],
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 2
+                },
+                "end": {
+                  "line": 25,
+                  "column": 19
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "value",
+                  "range": [
+                    675,
+                    680
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 25
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "mValue",
+                          "range": [
+                            691,
+                            697
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 8
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 14
+                            }
+                          }
+                        },
+                        "init": {
+                          "type": "Identifier",
+                          "name": "value",
+                          "range": [
+                            700,
+                            705
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 22
+                            }
+                          }
+                        },
+                        "range": [
+                          691,
+                          705
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 26,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 22
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "var",
+                    "range": [
+                      687,
+                      706
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 23
+                      }
+                    }
+                  },
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "Identifier",
+                      "name": "mValue",
+                      "range": [
+                        718,
+                        724
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 27,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 17
+                        }
+                      }
+                    },
+                    "range": [
+                      711,
+                      725
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 27,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 18
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  681,
+                  729
+                ],
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 26
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                674,
+                729
+              ],
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 19
+                },
+                "end": {
+                  "line": 28,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              657,
+              729
+            ],
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 2
+              },
+              "end": {
+                "line": 28,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * Returns manipulated currency value to be added to current currencyToHandle\n   *\n   * @param {number} value The base value that is being manipulated\n   * @return {number} mValue The manipulated value\n   ",
+                "range": [
+                  441,
+                  654
+                ],
+                "loc": {
+                  "start": {
+                    "line": 19,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          185,
+          731
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 21
+          },
+          "end": {
+            "line": 29,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        164,
+        731
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 29,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * The base currency handler. Every Currency Handler should extend off this class.\n * @example\n * class MyCurrencyHandler extends CurrencyHandler(){ ... }\n ",
+          "range": [
+            0,
+            162
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    164,
+    731
+  ],
+  "loc": {
+    "start": {
+      "line": 7,
+      "column": 0
+    },
+    "end": {
+      "line": 29,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * The base currency handler. Every Currency Handler should extend off this class.\n * @example\n * class MyCurrencyHandler extends CurrencyHandler(){ ... }\n ",
+      "range": [
+        0,
+        162
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * This is the simplest constructor a currency handler\n   * can have.\n   *\n   * @param {string} currency The name of the currency to be handled\n   ",
+      "range": [
+        189,
+        344
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 13,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* @type {string} ",
+      "range": [
+        374,
+        395
+      ],
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Returns manipulated currency value to be added to current currencyToHandle\n   *\n   * @param {number} value The base value that is being manipulated\n   * @return {number} mValue The manipulated value\n   ",
+      "range": [
+        441,
+        654
+      ],
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

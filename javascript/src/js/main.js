@@ -1,5 +1,1 @@
-class counter {
-
-constructor() {
-    this.count = 0;
-}
+var i = 5;

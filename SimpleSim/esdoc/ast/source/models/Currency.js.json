@@ -1,0 +1,928 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Currency",
+        "range": [
+          431,
+          439
+        ],
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 6
+          },
+          "end": {
+            "line": 10,
+            "column": 14
+          }
+        }
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                621,
+                632
+              ],
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 2
+                },
+                "end": {
+                  "line": 17,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "name",
+                  "range": [
+                    633,
+                    637
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 18
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            670,
+                            674
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "name",
+                          "range": [
+                            675,
+                            679
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 13
+                            }
+                          }
+                        },
+                        "range": [
+                          670,
+                          679
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "name",
+                        "range": [
+                          682,
+                          686
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        670,
+                        686
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 19,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "range": [
+                      670,
+                      687
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 21
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "* @type {string} ",
+                        "range": [
+                          644,
+                          665
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 18,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 25
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "* @type {CurrencyHandler} ",
+                        "range": [
+                          692,
+                          722
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 20,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 34
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            727,
+                            731
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "handler",
+                          "range": [
+                            732,
+                            739
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 16
+                            }
+                          }
+                        },
+                        "range": [
+                          727,
+                          739
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 16
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "CurrencyHandler",
+                          "range": [
+                            746,
+                            761
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 38
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                762,
+                                766
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 21,
+                                  "column": 39
+                                },
+                                "end": {
+                                  "line": 21,
+                                  "column": 43
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "name",
+                              "range": [
+                                767,
+                                771
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 21,
+                                  "column": 44
+                                },
+                                "end": {
+                                  "line": 21,
+                                  "column": 48
+                                }
+                              }
+                            },
+                            "range": [
+                              762,
+                              771
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 21,
+                                "column": 39
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 48
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          742,
+                          772
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 19
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 49
+                          }
+                        }
+                      },
+                      "range": [
+                        727,
+                        772
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 49
+                        }
+                      }
+                    },
+                    "range": [
+                      727,
+                      773
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 50
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "* @type {CurrencyHandler} ",
+                        "range": [
+                          692,
+                          722
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 20,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 34
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  638,
+                  777
+                ],
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 19
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                632,
+                777
+              ],
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 13
+                },
+                "end": {
+                  "line": 22,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              621,
+              777
+            ],
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 2
+              },
+              "end": {
+                "line": 22,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * This constructor will assign the designated name and use the default\n   * CurrencyHandler.\n   *\n   * @param {string} name The name of the currency being created\n   ",
+                "range": [
+                  443,
+                  618
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * Calls the CurrencyHandler's incrementCurrency method to determine how much\n   * currency should be added to the existing amount.\n   *\n   * @param {number} value The base value before manipluation done by\n   * the CurrencyHandler.\n   * @return {number} The amount of currency to be added\n   ",
+                "range": [
+                  781,
+                  1082
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 31,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "add",
+              "range": [
+                1085,
+                1088
+              ],
+              "loc": {
+                "start": {
+                  "line": 32,
+                  "column": 2
+                },
+                "end": {
+                  "line": 32,
+                  "column": 5
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "value",
+                  "range": [
+                    1089,
+                    1094
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 32,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 11
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1108,
+                              1112
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 33,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 33,
+                                "column": 15
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "handler",
+                            "range": [
+                              1113,
+                              1120
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 33,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 33,
+                                "column": 23
+                              }
+                            }
+                          },
+                          "range": [
+                            1108,
+                            1120
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "incrementCurrency",
+                          "range": [
+                            1121,
+                            1138
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 41
+                            }
+                          }
+                        },
+                        "range": [
+                          1108,
+                          1138
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 33,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 41
+                          }
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "name": "value",
+                          "range": [
+                            1139,
+                            1144
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 42
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 47
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        1108,
+                        1145
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 33,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 33,
+                          "column": 48
+                        }
+                      }
+                    },
+                    "range": [
+                      1101,
+                      1146
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 33,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 49
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  1095,
+                  1150
+                ],
+                "loc": {
+                  "start": {
+                    "line": 32,
+                    "column": 12
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                1088,
+                1150
+              ],
+              "loc": {
+                "start": {
+                  "line": 32,
+                  "column": 5
+                },
+                "end": {
+                  "line": 34,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              1085,
+              1150
+            ],
+            "loc": {
+              "start": {
+                "line": 32,
+                "column": 2
+              },
+              "end": {
+                "line": 34,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * Calls the CurrencyHandler's incrementCurrency method to determine how much\n   * currency should be added to the existing amount.\n   *\n   * @param {number} value The base value before manipluation done by\n   * the CurrencyHandler.\n   * @return {number} The amount of currency to be added\n   ",
+                "range": [
+                  781,
+                  1082
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 31,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          439,
+          1152
+        ],
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 14
+          },
+          "end": {
+            "line": 35,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        425,
+        1152
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 35,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * The base class for Currency. It is unwise to modify this file, rather it is\n * better to extend the class and perform any modifications there.\n * WARNING: No currency manipulation should be done in this file! That is why\n * handlers were created! The Currency class is a base class that allows SimpleSim\n * to connect with the rest of the base engine. Please reconsider any thoughts\n * about modifying this file.\n ",
+          "range": [
+            0,
+            423
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    425,
+    1152
+  ],
+  "loc": {
+    "start": {
+      "line": 10,
+      "column": 0
+    },
+    "end": {
+      "line": 35,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * The base class for Currency. It is unwise to modify this file, rather it is\n * better to extend the class and perform any modifications there.\n * WARNING: No currency manipulation should be done in this file! That is why\n * handlers were created! The Currency class is a base class that allows SimpleSim\n * to connect with the rest of the base engine. Please reconsider any thoughts\n * about modifying this file.\n ",
+      "range": [
+        0,
+        423
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * This constructor will assign the designated name and use the default\n   * CurrencyHandler.\n   *\n   * @param {string} name The name of the currency being created\n   ",
+      "range": [
+        443,
+        618
+      ],
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 2
+        },
+        "end": {
+          "line": 16,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* @type {string} ",
+      "range": [
+        644,
+        665
+      ],
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 4
+        },
+        "end": {
+          "line": 18,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* @type {CurrencyHandler} ",
+      "range": [
+        692,
+        722
+      ],
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Calls the CurrencyHandler's incrementCurrency method to determine how much\n   * currency should be added to the existing amount.\n   *\n   * @param {number} value The base value before manipluation done by\n   * the CurrencyHandler.\n   * @return {number} The amount of currency to be added\n   ",
+      "range": [
+        781,
+        1082
+      ],
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 31,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

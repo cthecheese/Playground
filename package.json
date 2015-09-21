@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "react": "cd react && node start",
-    "javascript": "cd javascript && node start",
+    "javascript": "cd javascript && node start"
   },
   "author": "Colby Hunter",
   "license": "ISC"
