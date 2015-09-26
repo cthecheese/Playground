@@ -9,7 +9,7 @@
     "access": null,
     "description": null,
     "lineNumber": 7,
-    "content": "/**\n * The base currency handler. Every Currency Handler should extend off this class.\n * @example\n * class MyCurrencyHandler extends CurrencyHandler(){ ... }\n */\n\nclass CurrencyHandler{\n  /**\n   * This is the simplest constructor a currency handler\n   * can have.\n   *\n   * @param {string} currency The name of the currency to be handled\n   */\n  constructor(currency){\n    /** @type {string} */\n    this.currencyToHandle = currency;\n  }\n\n  /**\n   * Returns manipulated currency value to be added to current currencyToHandle\n   *\n   * @param {number} value The base value that is being manipulated\n   * @return {number} mValue The manipulated value\n   */\n  incrementCurrency(value){\n    var mValue = value;\n    return mValue;\n  }\n}\n"
+    "content": "/**\n * The base currency handler. Every Currency Handler should extend off this class.\n * @example\n * class MyCurrencyHandler extends CurrencyHandler(){ ... }\n */\n\nexport default class CurrencyHandler{\n  /**\n   * This is the simplest constructor a currency handler\n   * can have.\n   *\n   * @param {string} currency The name of the currency to be handled\n   */\n  constructor(currency){\n    /** @type {string} */\n    this.currencyToHandle = currency;\n  }\n\n  /**\n   * Returns manipulated currency value to be added to current currencyToHandle\n   *\n   * @param {number} value The base value that is being manipulated\n   * @return {number} mValue The manipulated value\n   */\n  incrementCurrency(value){\n    var mValue = value;\n    return mValue;\n  }\n\n  decrementCurrrency(value){\n    var mValue = value;\n    return mValue;\n  }\n}\n"
   },
   {
     "kind": "class",
@@ -19,9 +19,9 @@
     "memberof": "engine/handlers/CurrencyHandler.js",
     "longname": "engine/handlers/CurrencyHandler.js~CurrencyHandler",
     "access": null,
-    "export": false,
+    "export": true,
     "importPath": "javascript/engine/handlers/CurrencyHandler.js",
-    "importStyle": null,
+    "importStyle": "CurrencyHandler",
     "description": "The base currency handler. Every Currency Handler should extend off this class.",
     "examples": [
       "class MyCurrencyHandler extends CurrencyHandler(){ ... }"
@@ -105,6 +105,100 @@
     "generator": false
   },
   {
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "decrementCurrrency",
+    "memberof": "engine/handlers/CurrencyHandler.js~CurrencyHandler",
+    "longname": "engine/handlers/CurrencyHandler.js~CurrencyHandler#decrementCurrrency",
+    "access": null,
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "params": [
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "engine/models/Building.js",
+    "memberof": null,
+    "longname": "engine/models/Building.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\n * Base class for all buildings\n */\n\nvar props = {\n  'name': '', // Name of the building\n  'owner': '', // Name of owner\n}\n\nexport default class Building{\n  constuctor(buildProps){\n\n  }\n}\n"
+  },
+  {
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "props",
+    "memberof": "engine/models/Building.js",
+    "longname": "engine/models/Building.js~props",
+    "access": null,
+    "export": false,
+    "importPath": "javascript/engine/models/Building.js",
+    "importStyle": null,
+    "description": "Base class for all buildings",
+    "lineNumber": 5,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Building",
+    "memberof": "engine/models/Building.js",
+    "longname": "engine/models/Building.js~Building",
+    "access": null,
+    "export": true,
+    "importPath": "javascript/engine/models/Building.js",
+    "importStyle": "Building",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "constuctor",
+    "memberof": "engine/models/Building.js~Building",
+    "longname": "engine/models/Building.js~Building#constuctor",
+    "access": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "buildProps",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
     "kind": "file",
     "static": true,
     "variation": null,
@@ -114,7 +208,7 @@
     "access": null,
     "description": null,
     "lineNumber": 10,
-    "content": "/**\n * The base class for Currency. It is unwise to modify this file, rather it is\n * better to extend the class and perform any modifications there.\n * WARNING: No currency manipulation should be done in this file! That is why\n * handlers were created! The Currency class is a base class that allows SimpleSim\n * to connect with the rest of the base engine. Please reconsider any thoughts\n * about modifying this file.\n */\n\nclass Currency{\n  /**\n   * This constructor will assign the designated name and use the default\n   * CurrencyHandler.\n   *\n   * @param {string} name The name of the currency being created\n   */\n  constructor(name){\n    /** @type {string} */\n    this.name = name;\n    /** @type {CurrencyHandler} */\n    this.handler = new CurrencyHandler(this.name);\n  }\n\n  /**\n   * Calls the CurrencyHandler's incrementCurrency method to determine how much\n   * currency should be added to the existing amount.\n   *\n   * @param {number} value The base value before manipluation done by\n   * the CurrencyHandler.\n   * @return {number} The amount of currency to be added\n   */\n  add(value){\n    return this.handler.incrementCurrency(value);\n  }\n}\n"
+    "content": "/**\n * The base class for Currency. It is unwise to modify this file, rather it is\n * better to extend the class and perform any modifications there.\n * WARNING: No currency manipulation should be done in this file! That is why\n * handlers were created! The Currency class is a base class that allows SimpleSim\n * to connect with the rest of the base engine. Please reconsider any thoughts\n * about modifying this file.\n */\n\nexport default class Currency{\n  /**\n   * This constructor will assign the designated name and use the default\n   * CurrencyHandler.\n   *\n   * @param {string} name The name of the currency being created\n   */\n  constructor(name, handler){\n    /** @type {string} */\n    this.name = name;\n    /** @type {CurrencyHandler} */\n    this.handler = typeof handler == 'undefined' ? new CurrencyHandler(this.name) : handler;\n  }\n\n  /**\n   * Calls the CurrencyHandler's incrementCurrency method to determine how much\n   * currency should be added to the existing amount.\n   *\n   * @param {number} value The base value before manipluation done by\n   * the CurrencyHandler.\n   * @return {number} The amount of currency to be added\n   */\n  add(value){\n    return this.handler.incrementCurrency(value);\n  }\n\n  subtract(value){\n    return this.handler.decrementCurrrency(value);\n  }\n}\n"
   },
   {
     "kind": "class",
@@ -124,9 +218,9 @@
     "memberof": "engine/models/Currency.js",
     "longname": "engine/models/Currency.js~Currency",
     "access": null,
-    "export": false,
+    "export": true,
     "importPath": "javascript/engine/models/Currency.js",
-    "importStyle": null,
+    "importStyle": "Currency",
     "description": "The base class for Currency. It is unwise to modify this file, rather it is\nbetter to extend the class and perform any modifications there.\nWARNING: No currency manipulation should be done in this file! That is why\nhandlers were created! The Currency class is a base class that allows SimpleSim\nto connect with the rest of the base engine. Please reconsider any thoughts\nabout modifying this file.",
     "lineNumber": 10,
     "interface": false
@@ -226,6 +320,32 @@
     "generator": false
   },
   {
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "subtract",
+    "memberof": "engine/models/Currency.js~Currency",
+    "longname": "engine/models/Currency.js~Currency#subtract",
+    "access": null,
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "params": [
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
     "kind": "file",
     "static": true,
     "variation": null,
@@ -235,7 +355,7 @@
     "access": null,
     "description": null,
     "lineNumber": 5,
-    "content": "/**\n * Holds on to the list of all currencies implemented in-game\n */\n\nclass CurrencyList{\n  /**\n   * Default constuctor that simply creates an empty object to be populated\n   */\n  constructor(){\n    this.list = {};\n  }\n  /**\n   * Returns an array of all currencies implemented in-game\n   * @return {array}\n   */\n  get listOfCurrencies(){\n    var arr = [];\n    for(var currency in this.list){\n      arr.push(currency);\n    }\n    return arr;\n  }\n\n  /**\n   * Allows you to add a currency into the game\n   *\n   * @param {Currency} The currency to be added to the list\n   */\n  addCurrency(currency){\n    this.list[currency.name] = currency;\n  }\n}\n"
+    "content": "/**\n * Holds on to the list of all currencies implemented in-game\n */\n\nexport default class CurrencyList{\n  /**\n   * Default constuctor that simply creates an empty object to be populated\n   */\n  constructor(){\n    this.list = {};\n  }\n  /**\n   * Returns an array of all currencies implemented in-game\n   * @return {array}\n   */\n  get listOfCurrencies(){\n    var arr = [];\n    for(var currency in this.list){\n      arr.push(currency);\n    }\n    return arr;\n  }\n\n  /**\n   * Allows you to add a currency into the game\n   *\n   * @param {Currency} The currency to be added to the list\n   */\n  addCurrency(currency){\n    this.list[currency.name] = currency;\n  }\n}\n"
   },
   {
     "kind": "class",
@@ -245,9 +365,9 @@
     "memberof": "engine/models/CurrencyList.js",
     "longname": "engine/models/CurrencyList.js~CurrencyList",
     "access": null,
-    "export": false,
+    "export": true,
     "importPath": "javascript/engine/models/CurrencyList.js",
-    "importStyle": null,
+    "importStyle": "CurrencyList",
     "description": "Holds on to the list of all currencies implemented in-game",
     "lineNumber": 5,
     "interface": false
@@ -341,7 +461,7 @@
     "access": null,
     "description": null,
     "lineNumber": 5,
-    "content": "/**\n * Holds all base information for a player\n */\n\nclass Player {\n  /**\n   * Simplest constructor, will simply assign a name to a player.\n   *\n   * @param {string} name The name of the player\n   */\n  constructor(name){\n    this.name = name;\n    this.wallet = new Wallet(currencyList.listOfCurrencies);\n  }\n\n  /**\n   * Views the wallet of the player\n   * @todo Set viewing of wallet to have it's own handler\n   */\n  viewWallet(){\n    console.log(this.wallet.view());\n  }\n}\n"
+    "content": "/**\n * Holds all base information for a player\n */\n\nexport default class Player {\n  /**\n   * Simplest constructor, will simply assign a name to a player.\n   *\n   * @param {string} name The name of the player\n   */\n  constructor(name){\n    this.name = name;\n    this.wallet = new Wallet(currencyList.listOfCurrencies);\n  }\n\n  /**\n   * Views the wallet of the player\n   * @todo Set viewing of wallet to have it's own handler\n   */\n  viewWallet(){\n    console.log(this.wallet.view());\n  }\n}\n"
   },
   {
     "kind": "class",
@@ -351,9 +471,9 @@
     "memberof": "engine/models/Player.js",
     "longname": "engine/models/Player.js~Player",
     "access": null,
-    "export": false,
+    "export": true,
     "importPath": "javascript/engine/models/Player.js",
-    "importStyle": null,
+    "importStyle": "Player",
     "description": "Holds all base information for a player",
     "lineNumber": 5,
     "interface": false
@@ -442,7 +562,7 @@
     "access": null,
     "description": null,
     "lineNumber": 5,
-    "content": "/**\n * The base wallet that holds onto a player's currencies\n */\n\nclass Wallet {\n  /**\n   * Generates an array of JSON objects filled with currencies.\n   *\n   * @param {object} currencies List of Currency from CurrenyList\n   */\n  constructor(currencies) {\n    this.currencies = {};\n\n    for(var currency in currencies){\n      this.currencies[currencies[currency]] = 0;\n    }\n  }\n\n  incrementCurrency(currency, value){\n    var theCurrency = currencyList.list[currency];\n    this.currencies[currency] += theCurrency.add(value);\n  }\n\n  view(){\n    return this.currencies;\n  }\n}\n"
+    "content": "/**\n * The base wallet that holds onto a player's currencies\n */\n\nexport default class Wallet {\n  /**\n   * Generates an array of JSON objects filled with currencies.\n   *\n   * @param {object} currencies List of Currency from CurrenyList\n   */\n  constructor(currencies) {\n    this.currencies = {};\n\n    for(var currency in currencies){\n      this.currencies[currencies[currency]] = 0;\n    }\n  }\n\n  incrementCurrency(currency, value){\n    var theCurrency = currencyList.list[currency];\n    this.currencies[currency] += theCurrency.add(value);\n  }\n\n  decrementCurrrency(currency, value){\n    var theCurrency = currencyList.list[currency];\n    this.currencies[currency] -= theCurrency.subtract(value);\n  }\n\n  view(){\n    return this.currencies;\n  }\n}\n"
   },
   {
     "kind": "class",
@@ -452,9 +572,9 @@
     "memberof": "engine/models/Wallet.js",
     "longname": "engine/models/Wallet.js~Wallet",
     "access": null,
-    "export": false,
+    "export": true,
     "importPath": "javascript/engine/models/Wallet.js",
-    "importStyle": null,
+    "importStyle": "Wallet",
     "description": "The base wallet that holds onto a player's currencies",
     "lineNumber": 5,
     "interface": false
@@ -531,12 +651,39 @@
     "kind": "method",
     "static": false,
     "variation": null,
+    "name": "decrementCurrrency",
+    "memberof": "engine/models/Wallet.js~Wallet",
+    "longname": "engine/models/Wallet.js~Wallet#decrementCurrrency",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "params": [
+      {
+        "name": "currency",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "kind": "method",
+    "static": false,
+    "variation": null,
     "name": "view",
     "memberof": "engine/models/Wallet.js~Wallet",
     "longname": "engine/models/Wallet.js~Wallet#view",
     "access": null,
     "description": null,
-    "lineNumber": 24,
+    "lineNumber": 29,
     "undocument": true,
     "params": [],
     "return": {

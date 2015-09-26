@@ -1,5 +1,41 @@
 window.esdocSearchIndex = [
   [
+    "javascript/engine/models/building.js~building",
+    "class/engine/models/Building.js~Building.html",
+    "<span>Building</span> <span class=\"search-result-import-path\">javascript/engine/models/Building.js</span>",
+    "class"
+  ],
+  [
+    "javascript/engine/models/currency.js~currency",
+    "class/engine/models/Currency.js~Currency.html",
+    "<span>Currency</span> <span class=\"search-result-import-path\">javascript/engine/models/Currency.js</span>",
+    "class"
+  ],
+  [
+    "javascript/engine/handlers/currencyhandler.js~currencyhandler",
+    "class/engine/handlers/CurrencyHandler.js~CurrencyHandler.html",
+    "<span>CurrencyHandler</span> <span class=\"search-result-import-path\">javascript/engine/handlers/CurrencyHandler.js</span>",
+    "class"
+  ],
+  [
+    "javascript/engine/models/currencylist.js~currencylist",
+    "class/engine/models/CurrencyList.js~CurrencyList.html",
+    "<span>CurrencyList</span> <span class=\"search-result-import-path\">javascript/engine/models/CurrencyList.js</span>",
+    "class"
+  ],
+  [
+    "javascript/engine/models/player.js~player",
+    "class/engine/models/Player.js~Player.html",
+    "<span>Player</span> <span class=\"search-result-import-path\">javascript/engine/models/Player.js</span>",
+    "class"
+  ],
+  [
+    "javascript/engine/models/wallet.js~wallet",
+    "class/engine/models/Wallet.js~Wallet.html",
+    "<span>Wallet</span> <span class=\"search-result-import-path\">javascript/engine/models/Wallet.js</span>",
+    "class"
+  ],
+  [
     "builtinexternal/ecmascriptexternal.js~array",
     "external/index.html",
     "BuiltinExternal/ECMAScriptExternal.js~Array",
@@ -330,10 +366,76 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "engine/handlers/currencyhandler.js~currencyhandler#constructor",
+    "class/engine/handlers/CurrencyHandler.js~CurrencyHandler.html#instance-constructor-constructor",
+    "engine/handlers/CurrencyHandler.js~CurrencyHandler#constructor",
+    "method"
+  ],
+  [
+    "engine/handlers/currencyhandler.js~currencyhandler#currencytohandle",
+    "class/engine/handlers/CurrencyHandler.js~CurrencyHandler.html#instance-member-currencyToHandle",
+    "engine/handlers/CurrencyHandler.js~CurrencyHandler#currencyToHandle",
+    "member"
+  ],
+  [
+    "engine/handlers/currencyhandler.js~currencyhandler#decrementcurrrency",
+    "class/engine/handlers/CurrencyHandler.js~CurrencyHandler.html#instance-method-decrementCurrrency",
+    "engine/handlers/CurrencyHandler.js~CurrencyHandler#decrementCurrrency",
+    "method"
+  ],
+  [
+    "engine/handlers/currencyhandler.js~currencyhandler#incrementcurrency",
+    "class/engine/handlers/CurrencyHandler.js~CurrencyHandler.html#instance-method-incrementCurrency",
+    "engine/handlers/CurrencyHandler.js~CurrencyHandler#incrementCurrency",
+    "method"
+  ],
+  [
+    "engine/models/building.js",
+    "file/engine/models/Building.js.html",
+    "engine/models/Building.js",
+    "file"
+  ],
+  [
+    "engine/models/building.js~building#constuctor",
+    "class/engine/models/Building.js~Building.html#instance-method-constuctor",
+    "engine/models/Building.js~Building#constuctor",
+    "method"
+  ],
+  [
     "engine/models/currency.js",
     "file/engine/models/Currency.js.html",
     "engine/models/Currency.js",
     "file"
+  ],
+  [
+    "engine/models/currency.js~currency#add",
+    "class/engine/models/Currency.js~Currency.html#instance-method-add",
+    "engine/models/Currency.js~Currency#add",
+    "method"
+  ],
+  [
+    "engine/models/currency.js~currency#constructor",
+    "class/engine/models/Currency.js~Currency.html#instance-constructor-constructor",
+    "engine/models/Currency.js~Currency#constructor",
+    "method"
+  ],
+  [
+    "engine/models/currency.js~currency#handler",
+    "class/engine/models/Currency.js~Currency.html#instance-member-handler",
+    "engine/models/Currency.js~Currency#handler",
+    "member"
+  ],
+  [
+    "engine/models/currency.js~currency#name",
+    "class/engine/models/Currency.js~Currency.html#instance-member-name",
+    "engine/models/Currency.js~Currency#name",
+    "member"
+  ],
+  [
+    "engine/models/currency.js~currency#subtract",
+    "class/engine/models/Currency.js~Currency.html#instance-method-subtract",
+    "engine/models/Currency.js~Currency#subtract",
+    "method"
   ],
   [
     "engine/models/currencylist.js",
@@ -342,15 +444,93 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "engine/models/currencylist.js~currencylist#addcurrency",
+    "class/engine/models/CurrencyList.js~CurrencyList.html#instance-method-addCurrency",
+    "engine/models/CurrencyList.js~CurrencyList#addCurrency",
+    "method"
+  ],
+  [
+    "engine/models/currencylist.js~currencylist#constructor",
+    "class/engine/models/CurrencyList.js~CurrencyList.html#instance-constructor-constructor",
+    "engine/models/CurrencyList.js~CurrencyList#constructor",
+    "method"
+  ],
+  [
+    "engine/models/currencylist.js~currencylist#list",
+    "class/engine/models/CurrencyList.js~CurrencyList.html#instance-member-list",
+    "engine/models/CurrencyList.js~CurrencyList#list",
+    "member"
+  ],
+  [
+    "engine/models/currencylist.js~currencylist#listofcurrencies",
+    "class/engine/models/CurrencyList.js~CurrencyList.html#instance-get-listOfCurrencies",
+    "engine/models/CurrencyList.js~CurrencyList#listOfCurrencies",
+    "member"
+  ],
+  [
     "engine/models/player.js",
     "file/engine/models/Player.js.html",
     "engine/models/Player.js",
     "file"
   ],
   [
+    "engine/models/player.js~player#constructor",
+    "class/engine/models/Player.js~Player.html#instance-constructor-constructor",
+    "engine/models/Player.js~Player#constructor",
+    "method"
+  ],
+  [
+    "engine/models/player.js~player#name",
+    "class/engine/models/Player.js~Player.html#instance-member-name",
+    "engine/models/Player.js~Player#name",
+    "member"
+  ],
+  [
+    "engine/models/player.js~player#viewwallet",
+    "class/engine/models/Player.js~Player.html#instance-method-viewWallet",
+    "engine/models/Player.js~Player#viewWallet",
+    "method"
+  ],
+  [
+    "engine/models/player.js~player#wallet",
+    "class/engine/models/Player.js~Player.html#instance-member-wallet",
+    "engine/models/Player.js~Player#wallet",
+    "member"
+  ],
+  [
     "engine/models/wallet.js",
     "file/engine/models/Wallet.js.html",
     "engine/models/Wallet.js",
     "file"
+  ],
+  [
+    "engine/models/wallet.js~wallet#constructor",
+    "class/engine/models/Wallet.js~Wallet.html#instance-constructor-constructor",
+    "engine/models/Wallet.js~Wallet#constructor",
+    "method"
+  ],
+  [
+    "engine/models/wallet.js~wallet#currencies",
+    "class/engine/models/Wallet.js~Wallet.html#instance-member-currencies",
+    "engine/models/Wallet.js~Wallet#currencies",
+    "member"
+  ],
+  [
+    "engine/models/wallet.js~wallet#decrementcurrrency",
+    "class/engine/models/Wallet.js~Wallet.html#instance-method-decrementCurrrency",
+    "engine/models/Wallet.js~Wallet#decrementCurrrency",
+    "method"
+  ],
+  [
+    "engine/models/wallet.js~wallet#incrementcurrency",
+    "class/engine/models/Wallet.js~Wallet.html#instance-method-incrementCurrency",
+    "engine/models/Wallet.js~Wallet#incrementCurrency",
+    "method"
+  ],
+  [
+    "engine/models/wallet.js~wallet#view",
+    "class/engine/models/Wallet.js~Wallet.html#instance-method-view",
+    "engine/models/Wallet.js~Wallet#view",
+    "method"
   ]
 ]

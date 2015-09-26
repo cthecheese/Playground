@@ -8,7 +8,8 @@ gulp.slurped = false;
 
 gulp.task('copyHTML', function(){
   gulp.src('src/*.html')
-          .pipe(gulp.dest("public"));
+          .pipe(gulp.dest("public"))
+          .pipe(livereload());
 });
 
 gulp.task('babel', function(){
@@ -16,7 +17,8 @@ gulp.task('babel', function(){
     .pipe(babel())
     .on('error', console.error.bind(console))
     .pipe(concat("main.js"))
-    .pipe(gulp.dest("public/js"));
+    .pipe(gulp.dest("public/js"))
+    .pipe(livereload());
 });
 
 gulp.task('watch', function(){
