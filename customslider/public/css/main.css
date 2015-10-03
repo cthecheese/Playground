@@ -1,0 +1,19 @@
+#content-slider {
+  width: auto;
+  height: 400px;
+  overflow: hidden;
+}
+
+#content-slider .slide {
+  display: block;
+  height: 400px;
+}
+
+#content-slider .hidden-slide{
+  display: none;
+}
+
+#content-slider .slide img {
+  margin: 0 auto;
+  max-height: 100%;
+}

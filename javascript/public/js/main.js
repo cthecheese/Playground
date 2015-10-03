@@ -185,8 +185,6 @@ function customArray() {
   console.log(mySecondArray.length);
 }
 
-customArray();
-
 function deletionTesting() {
   var obj = {
     a: 20
@@ -202,4 +200,20 @@ function deletionTesting() {
 
   console.log(obj2.a); //20
   console.log(obj.a); //undefined
+
+  obj.a = 10;
+
+  console.log(obj2.a); // 20
+  console.log(obj.a); // 10
 }
+
+function littleTests() {
+  // Invoking a [[get]] operation, expecting a ReferenceError
+  // console.log("Hello: " + nonExistingVariable);
+
+  // Invoking a [[get]] operation, expecting undefined
+  var a = {};
+  console.log("Hello: " + a.nonExistingProperty);
+}
+
+littleTests();
