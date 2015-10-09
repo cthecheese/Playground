@@ -216,4 +216,88 @@ function littleTests() {
   console.log("Hello: " + a.nonExistingProperty);
 }
 
-littleTests();
+function prototypeChaining() {
+  var myFirstObject = {
+    a: 20
+  };
+
+  var mySecondObject = Object.create(myFirstObject);
+  mySecondObject.b = 15;
+  console.log('My Second Object A: ' + mySecondObject.a);
+
+  var myThirdObject = Object.create(mySecondObject);
+  console.log('My Third Object A: ' + myThirdObject.a);
+  console.log('My Third Object B: ' + myThirdObject.b);
+
+  for (var prop in myThirdObject) {
+    console.log(myThirdObject[prop]);
+  }
+
+  function Foo() {
+    this.a = 200;
+    this.b = 500;
+  }
+  Foo.prototype.myValue = function () {
+    return this.a;
+  };
+
+  function Bar() {
+    this.b = 300;
+  }
+
+  Bar.prototype = Foo.prototype;
+
+  var obj = new Foo();
+  var obj2 = new Bar();
+
+  console.log(obj.myValue()); // 200
+  console.log(obj2.myValue()); // 200
+
+  Bar.prototype.myValue = function () {
+    return this.b;
+  };
+
+  console.log(obj2.myValue()); // 300
+  console.log(obj.myValue()); // 500
+}
+
+function checkingToString() {
+  function Foo(name) {
+    // this.name = name
+    // this.toString = function(){
+    //   if(name)
+    //     return this.name
+    //   return "Colby"
+    // }
+  }
+
+  var Bar = new Foo();
+
+  console.log(Bar.toString());
+}
+
+function ooTesting() {
+  function Foo(who) {
+    this.me = who;
+  }
+  Foo.prototype.identify = function () {
+    return "I am " + this.me;
+  };
+
+  function Bar(who) {
+    Foo.call(this, who);
+  }
+  Bar.prototype = Object.create(Foo.prototype);
+
+  Bar.prototype.speak = function () {
+    alert("Hello, " + this.identify() + ".");
+  };
+
+  var b1 = new Bar("b1");
+  var b2 = new Bar("b2");
+
+  b1.speak();
+  b2.speak();
+}
+
+ooTesting();

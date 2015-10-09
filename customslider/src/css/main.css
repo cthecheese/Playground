@@ -2,18 +2,37 @@
   width: auto;
   height: 400px;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 #content-slider .slide {
+  position: absolute;
+  width: 100%;
   display: block;
   height: 400px;
 }
 
+#content-slider .current-slide {
+  opacity: 1;
+  animation: fadeIn 1s;
+}
+
 #content-slider .hidden-slide{
-  display: none;
+  opacity: 0;
+  animation: fadeOut 1s;
 }
 
 #content-slider .slide img {
   margin: 0 auto;
   max-height: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
 }
