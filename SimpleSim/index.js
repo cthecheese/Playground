@@ -1,4 +1,9 @@
-import Player from 'dist/main.js';
+var path = require('path')
+var express = require('express')
+var app = express()
 
-var player = new Player("Colby");
-console.log(player);
+app.use(express.static(__dirname + '/public'))
+
+app.listen(3000, function(){
+  console.log('Simple Sim Test Environment Running')
+})
