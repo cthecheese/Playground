@@ -1,4 +1,4 @@
-var CurrencyHandler = {
+var ResourceHandler = {
   initialize(config){
     this.name = config.name
     this.author = config.author
@@ -11,4 +11,4 @@ var CurrencyHandler = {
   }
 }
 
-module.exports = CurrencyHandler
+module.exports = ResourceHandler

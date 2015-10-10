@@ -46,9 +46,7 @@
 
 	'use strict';
 
-	var ssCurrencyHandler = __webpack_require__(1);
-
-	ssCurrencyHandler.getPluginDetails();
+	__webpack_require__(1);
 
 /***/ },
 /* 1 */
@@ -56,43 +54,7 @@
 
 	'use strict';
 
-	var CurrencyHandler = __webpack_require__(2);
-
-	var ssCurrencyHandler = Object.create(CurrencyHandler);
-	var config = {
-	  name: 'Simple Sim CurrencyHandler',
-	  author: 'Colby Hunter',
-	  description: 'Default CurrencyHandler for Simple Sim'
-	};
-
-	CurrencyHandler.initialize(config);
-
-	ssCurrencyHandler.getInformation = function () {
-	  CurrencyHandler.getPluginDetails();
-	};
-
-	module.exports = ssCurrencyHandler;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	var CurrencyHandler = {
-	  initialize: function initialize(config) {
-	    this.name = config.name;
-	    this.author = config.author;
-	    this.description = config.description;
-	  },
-	  getPluginDetails: function getPluginDetails() {
-	    console.log('Plugin Name: ' + this.name);
-	    console.log('Author: ' + this.author);
-	    console.log('Description: ' + this.description);
-	  }
-	};
-
-	module.exports = CurrencyHandler;
+	var fs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"fs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ }
 /******/ ]);

@@ -1,3 +1,1 @@
-var ssCurrencyHandler = require('./handlers/ssCurrencyHandler.js')
-
-ssCurrencyHandler.getPluginDetails()
+require('./server/config.js')
