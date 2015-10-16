@@ -7,10 +7,17 @@
     "react": "cd react && node start",
     "javascript": "cd javascript && node start",
     "customslider": "cd customslider && node start",
-    "forgetmenot": "cd forgetmenot && node start"
+    "forgetmenot": "cd forgetmenot && node start",
+    "iToDo": "cd iToDo && node start"
   },
   "author": "Colby Hunter",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.3.0",
+    "gulp-livereload": "^3.8.1"
+  },
+  "dependencies": {
+    "fs": "0.0.2"
   }
 }

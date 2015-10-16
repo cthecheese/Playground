@@ -22,6 +22,7 @@ Technologies
 */
 	Trading
 	Researching
+  AI
 /*
   Models
 */

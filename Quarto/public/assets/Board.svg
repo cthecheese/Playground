@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="416px" height="416px" viewBox="0 0 416 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
+    <title>Board</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-24.000000, -182.000000)">
+            <g id="Board" sketch:type="MSLayerGroup" transform="translate(24.000000, 182.000000)">
+                <rect id="Rectangle-35" fill="#633D1B" sketch:type="MSShapeGroup" x="0" y="0" width="416" height="416"></rect>
+                <circle id="Oval-29-Copy-3" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="59.5" cy="59.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-4" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="158.5" cy="59.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-6" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="257.5" cy="59.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-5" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="356.5" cy="59.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-10" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="59.5" cy="158.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-7" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="158.5" cy="158.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-8" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="257.5" cy="158.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-9" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="356.5" cy="158.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-18" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="59.5" cy="257.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-11" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="158.5" cy="257.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-12" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="257.5" cy="257.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-13" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="356.5" cy="257.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-14" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="59.5" cy="356.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-15" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="158.5" cy="356.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-16" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="257.5" cy="356.5" r="39.5"></circle>
+                <circle id="Oval-29-Copy-17" stroke-opacity="0.409759964" stroke="#FFECEC" stroke-width="2" fill="#F7F7F7" sketch:type="MSShapeGroup" cx="356.5" cy="356.5" r="39.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
