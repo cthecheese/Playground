@@ -4,23 +4,25 @@
 var express = require('express')
 var app = express()
 var Promise = require('bluebird')
+var bodyParser = require('body-parser')
+
 var port = 3000
-var api = express.Router()
+var api = require('./routes/api')
 
-/*
-  Bookshelf
-*/
+var allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+};
 
-var knex = require('knex')({
-  client: 'postgresql',
-  connection: {
-    host     : 'localhost',
-    port: '5432',
-    user     : 'chunter',
-    database : 'itodo',
-    charset  : 'utf8'
-})
-var bookshelf = require('bookhself')(knex)
+app.use(allowCrossDomain);
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded());
+
+// parse application/json
+app.use(bodyParser.json());
+
+// parse application/vnd.api+json as json
+app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 api.get('/', express.static(__dirname + '/public'))
 
