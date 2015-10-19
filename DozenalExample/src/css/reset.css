@@ -1,0 +1,179 @@
+/* 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+::selection {
+	background: #555; color: #FFF; /* Safari */
+	}
+::-moz-selection {
+	background: #555; color: #FFF; /* Firefox */
+}
+
+ul, ol { margin: 0; padding: 0; }
+
+strong { font-weight: bold; }
+
+a { outline: none; text-decoration: none; color: #AC7F33;  }
+
+a:hover { color: #C6923A;   }
+
+a img { text-decoration: none; }
+
+p { text-align: left; margin: 0; }
+
+p, li { color: #000; line-height: 1.5em; color: #444; }
+
+em { font-style: italic; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #FFF; padding: 0; margin: 0; font-family: Baskerville, Garamond, Times, serif; font-weight: 400 !important;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #AC7F33; }
+
+h1 { padding-bottom: 20px; }
+
+h2 { font-size: 2.2em; font-weight: bold; padding-bottom: 5px; text-align: left; padding-bottom: 10px; }
+h3 { font-size: 1.6em; padding-bottom: 8px; }
+h4 { font-size: 1.4em; }
+
+form { text-align: left; }
+
+/* tools */
+
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+.alignright {
+	float: right;
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+.text_right { text-align: right; }
+
+.center {
+	text-align: center;
+	width: 100%;
+}
+
+.small {
+	font-size: 0.9em;
+}
+
+.smaller { font-size: 0.8em !important; }
+
+.padding {
+	padding: 10px;
+}
+
+.edit_inline {
+	font-size: 12px !important;
+	text-decoration: none;
+	color: #FFF !important;
+	background: #333;
+	position: relative;
+	top: -5px;
+	padding: 3px 6px;
+	font-weight: normal !important;
+	text-decoration: none !important;
+}
+
+.edit_inline:hover {
+	background: #F57B20;
+	color: #FFF;
+}
+
+.rounded { border-radius: 5px; }
+
+.shadow { box-shadow: 0 2px 4px #CCC; }
+
+
+/* columns */
+
+.col20, .col25, .col30, .col33, .col35, .col40, .col45, .col50, .col55, .col60, .col65, .col70, .col75, .col80 { float: left; display: block; }
+.col20 { width: 20%; }
+.col25 { width: 25%; }
+.col30 { width: 30%; }
+.col33 { width: 33%; }
+.col35 { width: 35%; }
+.col40 { width: 40%; }
+.col45 { width: 45%; }
+.col50 { width: 50%; }
+.col55 { width: 55%; }
+.col60 { width: 60%; }
+.col65 { width: 65%; }
+.col70 { width: 70%; }
+.col75 { width: 75%; }
+.col80 { width: 80%; }
+
+
+
+/* fonts */
+
+
+
+/* colors */
+
+h2, h3, h4, h5, h6 { color: #000; padding-bottom: 15px; text-align: left; }
+
+footer h2, h2 a, h3 a, h4 a, h5 a, h6 a, .gold { color: #AC7F33; }
+
+.clear { clear: both; height:0; line-height: 0;}
+
+
+/* gradients */
