@@ -1,32 +1,120 @@
-$(document).ready(function() {
-  var board = document.getElementById('the-board')
-  var piece = document.getElementsByClassName('piece')[0]
-  var cellSpacing = Math.floor(board.height/20.8)
-  var cellWidth = Math.floor(board.width/5.265822785)
-  var cellHeight = cellWidth
-  piece.height = Math.floor(board.height/6.9333)
-  console.log('Board Height: ' + board.height)
-  console.log('Assumed Height of Piece: ' + board.height/6.93333)
-  console.log('Actual Height of Piece: ' + piece.height)
-  console.log('Piece Width: ' + piece.width)
-  console.log('Cell Height: ' + cellHeight)
-  console.log('Cell Width: ' + cellWidth)
-  console.log('Cell Spacing: ' + cellSpacing)
-
-  function populatePieces(){
-    for(let i = 0; i <= 16; i++){
-      var tempImage = document.createElement("img")
-      tempImage.setAttribute('src', )
+var Board = {
+  cells: [],
+  element: '',
+  cellWidth: '',
+  cellHeight: '',
+  cellSpacing: '',
+  placePiece: function(x, y, piece){
+    if(!this.isOccupied(x, y)){
+      this.cells[x][y] = piece
     }
+  },
+  isOccupied: function(x, y){
+    if(typeof this.cells[x][y] != 'undefined'){
+      return true
+    }
+    return false
+  },
+  initialize: function(config){
+    for(let i = 0; i < config.size; i++){
+      this.cells.push(new Array(config.size))
+    }
+
+    this.element = config.element
+
+    this.cellSpacing = Math.floor($(this.element).attr('width')/20.8)
+    this.cellWidth = Math.floor($(this.element).attr('width')/5.265822785)
+    this.cellHeight = this.cellWidth
+  }
+}
+
+var Game = {
+  ActivePlayer: '',
+  TurnCount: 0,
+  AvailablePieces: []
+}
+
+var Player = {
+  name: '',
+  wins: 0,
+  losses: 0
+}
+
+var Piece = {
+  /*
+    Height:
+    1 - Little (L), 2 - Big (B)
+    Shape:
+    1 - Square (S), 2 - Circle (O)
+    Surface:
+    1 - Full (W), 2 - Hollow (H)
+    Color:
+    1 - Tan (T), 2 - Grey (G)
+  */
+  id: 0,
+  height: 0,
+  shape: 0,
+  surface: 0,
+  color: 0,
+  name: '',
+  image: '',
+  initialize: function(height, shape, surface, color){
+    if(height == 0 || shape == 0 || surface == 0 || color == 0){
+      console.error('Check properties for 0: (Height, Shape, Surface, Color) ' + height + ', ' + shape + ', ' + surface + ', ' + color)
+    }
+    else{
+      this.height = height
+      this.shape = shape
+      this.surface = surface
+      this.color = color
+      this.id = ''+height+shape+surface+color
+      this.setName()
+      this.setImage()
+    }
+  },
+  setName: function(){
+    if(this.height == 0 || this.shape == 0 || this.surface == 0 || this.color == 0){
+      console.error("Can't set name: Properties of piece not set")
+    }
+    let tempName = ''
+    tempName += this.height == 1 ? 'L' : 'B'
+    tempName += this.shape == 1 ? 'S' : 'O'
+    tempName += this.surface == 1 ? 'W' : 'H'
+    tempName += this.color == 1 ? 'T': 'G'
+
+    this.name = tempName
+  },
+  setImage: function(){
+    this.image = '../assets/'+this.name+'.svg'
+  }
+}
+
+$(document).ready(function() {
+  // Configure Board
+  let config = {
+    size: 4,
+    element: $('#the-board')
   }
 
-  function movePiece(x, y){
-    var posX = x*cellSpacing+x*cellWidth-cellWidth+(.5*cellWidth-.5*piece.width)
-    var posY = y*cellSpacing+y*cellHeight-cellHeight+(.5*cellHeight-.5*piece.height)+0
-    // posX = (x*cellSpacing)+(cellWidth*x)-cellWidth
+  function createPieces(){
+    let list = []
+    for(let size = 1; size <= 2; size++){
+      for(let shape = 1; shape <= 2; shape++){
+        for(let surface = 1; surface <= 2; surface++){
+          for(let color = 1; color <= 2; color++){
+            let tempPiece = Object.create(Piece)
+            tempPiece.initialize(size, shape, surface, color)
+            list.push(tempPiece)
+          }
+        }
+      }
+    }
 
-    piece.style.top = posY+'px'
-    piece.style.left = posX+'px'
+    Game.AvailablePieces = list
   }
-  movePiece(1,2)
+
+  Board.initialize(config)
+  createPieces();
+
+  // Populate GUI with Available Pieces
 });
