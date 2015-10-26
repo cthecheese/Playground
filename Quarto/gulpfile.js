@@ -4,21 +4,15 @@ var babel = require('gulp-babel')
 var sass = require('gulp-sass')
 var concat = require('gulp-concat')
 
-var src = {
-  js: 'src/js/*.js',
-  css: 'src/sass/*.scss',
-  html: 'src/*.html'
-}
-
-var pub = {
-  js: 'public/js',
-  css: 'public/css',
-  html: 'public'
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
 }
 
 gulp.task('babel', function(){
   gulp.src('src/js/*.js')
   .pipe(babel())
+  .on('error', handleError)
   .pipe(concat('main.js'))
   .pipe(gulp.dest('public/js'))
   .pipe(livereload())
@@ -27,6 +21,7 @@ gulp.task('babel', function(){
 gulp.task('sass', function(){
   gulp.src('src/sass/*.scss')
   .pipe(sass())
+  .on('error', handleError)
   .pipe(concat('main.css'))
   .pipe(gulp.dest('public/css'))
   .pipe(livereload())
@@ -34,6 +29,7 @@ gulp.task('sass', function(){
 
 gulp.task('html', function(){
   gulp.src('src/*.html')
+  .on('error', handleError)
   .pipe(gulp.dest('public'))
   .pipe(livereload())
 })
